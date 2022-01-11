@@ -20,9 +20,9 @@
 #include "PCF8583.h"
 
 // provide device address as a full 8 bit address (like the datasheet)
-PCF8583::PCF8583(uint8_t address) {
+PCF8583::PCF8583(uint8_t address, uint8_t sda, uint8_t scl) {
     _address = address >> 1;  // convert to 7 bit so Wire doesn't choke
-    Wire.begin();
+    Wire.begin(sda, scl);
 }
 
 void PCF8583::reset() {
