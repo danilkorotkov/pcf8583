@@ -1,6 +1,8 @@
 #include "PCF8583.h"
+#define sda  21
+#define scl  22
 
-PCF8583 rtc(0xA0);
+PCF8583 rtc(0xA0, sda, scl);
 
 void assertEquals(const char * test, byte expected, byte real) {
     if (expected == real) {
