@@ -117,6 +117,8 @@ class PCF8583 {
         uint8_t bcd2byte(uint8_t value);
 
         uint8_t _address;
+        uint8_t _sda;
+        uint8_t _scl;
 
 };
 
