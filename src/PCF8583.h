@@ -65,7 +65,7 @@ class PCF8583 {
 
     public:
 
-        PCF8583(uint8_t address, uint8_t sda, uint8_t scl);
+        PCF8583(uint8_t address);
         void reset(); // resets chip to factory values
         void reset(uint8_t mode); // resets specific registers
 
@@ -117,8 +117,6 @@ class PCF8583 {
         uint8_t bcd2byte(uint8_t value);
 
         uint8_t _address;
-        uint8_t _sda;
-        uint8_t _scl;
 
 };
 
